@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "HTMLFiles/xhtml-math11-f.dtd">
+
+<!-- Created with the Wolfram Language : www.wolfram.com -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      inboxGraph
+    </title>
+    <link href="HTMLFiles/index.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <p
+      class="Text"
+      style="
+        text-align: center;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: #000000;
+      "
+    >
+      <span class="InputInline" style="text-align: center;"
+        ><span
+          ><img
+            src="HTMLFiles/index_1.gif"
+            alt="index_1.gif"
+            width="302"
+            height="225"
+            style="vertical-align: middle;" /></span></span
+      ><br /><span style="font-size: 14px; font-style: italic;"
+        >By Ryan Bell for Wolfram Summer School 2020.</span
+      >
+    </p>
+
+    <p
+      class="Text"
+      style="
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 0px;
+        border-bottom: 1px;
+        border-style: solid;
+        border-color: #000000;
+      "
+    >
+      <span style="font-size: 24px;"
+        >Constructing directed graphs of email conversations</span
+      ><span style="font-size: 24px; font-weight: bold;"><br /></span
+      ><span style="font-weight: bold;">Abstract: </span>InboxGraph is a
+      property graph representation of mail server archive data, in which
+      message collections are presented in a higher-dimensional space than is
+      possible with traditional user interfaces with linear timestamped
+      constraints. RFC-822 message parsing is used to extract message
+      trajectories between servers and network participants, forming a
+      metadata-rich lattice of vertices and edges inside a directed graph.
+      Asymmetrical relationships between participants are used to calculate
+      Address Rank measurements of information flow importance and to partition
+      the graph into best-fitting communities, opening new channels for
+      organizational optimization. Additional layers of natural language
+      processing and data export to open formats permit further interactive
+      exploration, querying, and discovery of deeper associations within the
+      graph.
+    </p>
+
+    <p class="Text" style="text-align: center;">
+      <span style="font-size: 18px; font-weight: bold;"
+        >Section 1. Community partitioning &amp; Time series helpers
+        <br /></span
+      ><span style="font-size: 14px;"
+        >Linear time series subgraph construction and best-fitting community
+        functions.</span
+      >
+    </p>
+
+    <p class="Input">
+      <img
+        src="HTMLFiles/index_2.png"
+        alt="index_2.png"
+        width="893"
+        height="774"
+        style="vertical-align: middle;"
+      />
+    </p>
+
+    <p
+      class="Text"
+      style="
+        text-align: center;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 1px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: #000000;
+      "
+    >
+      <span style="font-size: 18px; font-weight: bold;"
+        >Section 2. Directed InboxGraph visualization.<br /></span
+      ><span style="font-size: 14px;"
+        >Visualize a MBOX archive thread flow diagram.<br />(Example uses a
+        mailing list archive from </span
+      ><span style="font-size: 14px;"
+        ><span
+          ><a href="https://lists.apache.org"
+            ><span class="HyperlinkInline">https://lists.apache.org</span></a
+          ></span
+        ></span
+      ><span style="font-size: 14px;">.) <br /><br /></span
+      ><span class="InputInline"
+        ><span
+          ><img
+            src="HTMLFiles/index_3.gif"
+            alt="index_3.gif"
+            width="381"
+            height="271"
+            style="vertical-align: middle;" /></span
+      ></span>
+    </p>
+
+    <p class="Input">
+      <img
+        src="HTMLFiles/index_4.png"
+        alt="index_4.png"
+        width="1229"
+        height="2706"
+        style="vertical-align: middle;"
+      />
+    </p>
+
+    <p class="Output">
+      <img
+        src="HTMLFiles/index_5.gif"
+        alt="index_5.gif"
+        width="200"
+        height="699"
+        style="vertical-align: middle;"
+        usemap="#map_5"
+      />
+      <map name="map_5">
+        <area shape="rect" coords="59,695,66,688" nohref="" />
+        <area shape="rect" coords="76,18,86,9" nohref="" />
+      </map>
+    </p>
+
+    <p
+      class="Text"
+      style="
+        text-align: center;
+        border-left: 0px;
+        border-right: 0px;
+        border-top: 1px;
+        border-bottom: 0px;
+        border-style: solid;
+        border-color: #000000;
+      "
+    >
+      <span style="font-size: 18px; font-weight: bold;"
+        >Section 3. AddressRank visualization.<br /></span
+      ><span style="font-size: 14px;"
+        >Calculating the page rank centrality score for addresses and link by
+        max message destination volume.<br /><br /></span
+      ><span
+        ><span
+          ><img
+            src="HTMLFiles/index_6.gif"
+            alt="index_6.gif"
+            width="375"
+            height="270"
+            style="vertical-align: middle;" /></span></span
+      ><br /><span style="font-style: italic;"
+        >(https://en.wikipedia.org/wiki/PageRank#/media/File:PageRank-hi-res.png)</span
+      >
+    </p>
+
+    <p class="Text">
+      PageRank is a graph analysis algorithm which measures the relative
+      importance of vertices within a directed graph using the number of edge
+      links it receives, the propensity (out-going edges) of the linkers, and
+      the PageRank centrality of the linkers.
+    </p>
+
+    <p class="Input">
+      <img
+        src="HTMLFiles/index_7.png"
+        alt="index_7.png"
+        width="1041"
+        height="627"
+        style="vertical-align: middle;"
+      />
+    </p>
+
+    <p class="Output">
+      <img
+        src="HTMLFiles/index_8.gif"
+        alt="index_8.gif"
+        width="437"
+        height="336"
+        style="vertical-align: middle;"
+        usemap="#map_8"
+      />
+      <map name="map_8">
+        <area
+          shape="rect"
+          coords="111,300,118,293"
+          title="wendy@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="245,251,256,239"
+          title="walter@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="193,251,205,239"
+          title="victor@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="414,251,425,239"
+          title="trudy@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="362,251,374,239"
+          title="trent@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="118,328,125,320"
+          title="sybil@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="111,65,118,59"
+          title="rupert@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="163,196,169,190"
+          title="peggy@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="263,172,276,159"
+          title="oscar@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="370,118,377,110"
+          title="olivia@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="422,65,428,59"
+          title="niaj@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="8,327,14,321"
+          title="michael@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="339,327,345,321"
+          title="mallory@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="422,14,428,7"
+          title="judy@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="59,65,66,59"
+          title="ivan@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="331,249,339,241"
+          title="heidi@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="279,249,287,241"
+          title="frank@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="111,197,118,189"
+          title="grace@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="60,196,66,190"
+          title="faythe@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="8,196,14,190"
+          title="eve@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="163,14,169,7"
+          title="erin@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="111,14,118,7"
+          title="dan@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="162,66,170,58"
+          title="craig@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="8,65,14,59"
+          title="chuck@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="228,328,235,320"
+          title="carol@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="109,120,120,108"
+          title="bob@mail.com"
+          nohref=""
+        />
+        <area
+          shape="rect"
+          coords="109,250,120,240"
+          title="alice@mail.com"
+          nohref=""
+        />
+      </map>
+    </p>
+
+    <div
+      style="
+        font-family: Helvetica;
+        font-size: 11px;
+        width: 100%;
+        border: 1px none #999999;
+        border-top-style: solid;
+        padding-top: 2px;
+        margin-top: 20px;
+      "
+    >
+      <a
+        href="http://www.wolfram.com/language/"
+        style="color: #000; text-decoration: none;"
+      >
+        <span style="color: #555555;">Created with the Wolfram Language</span>
+      </a>
+    </div>
+  </body>
+</html>
