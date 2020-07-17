@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[   3413086,      56674]
-NotebookOptionsPosition[   3411671,      56646]
-NotebookOutlinePosition[   3412068,      56662]
-CellTagsIndexPosition[   3412025,      56659]
+NotebookDataLength[   3413125,      56677]
+NotebookOptionsPosition[   3411710,      56649]
+NotebookOutlinePosition[   3412107,      56665]
+CellTagsIndexPosition[   3412064,      56662]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -535,7 +535,7 @@ Cell[BoxData[
         RowBox[{
         "GetOccurLength", " ", "returns", " ", "the", " ", "number", " ", 
          "of", " ", "subgroups", " ", "co"}], "-", 
-        RowBox[{"occurances", "."}]}], "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"occurrences", "."}]}], "*)"}], "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{
         RowBox[{"GetOccurLength", "[", 
@@ -562,7 +562,7 @@ Cell[BoxData[
          RowBox[{
          "Construct", " ", "graph", " ", "partitioning", " ", "edges", " ", 
           "for", " ", "subgroups", " ", "using", " ", "co"}], "-", 
-         RowBox[{"occurance", " ", 
+         RowBox[{"occurrence", " ", 
           RowBox[{"counts", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{"e", "=", 
         RowBox[{"DeleteCases", "[", "\[IndentingNewLine]", 
@@ -588,7 +588,7 @@ Cell[BoxData[
        RowBox[{"(*", 
         RowBox[{
          RowBox[{"Construct", " ", "graph", " ", "using", " ", "co"}], "-", 
-         RowBox[{"occurences", " ", "as", " ", "edge", " ", 
+         RowBox[{"occurrences", " ", "as", " ", "edge", " ", 
           RowBox[{"weights", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
        RowBox[{"g", "=", 
         RowBox[{"Graph", "[", 
@@ -678,8 +678,10 @@ Cell[BoxData[
             "\[IndentingNewLine]", "}"}]}], "&"}], "/@", "v"}]}], "]"}], "//",
        "Flatten"}], "\[IndentingNewLine]", ")"}]}], 
    "\[IndentingNewLine]"}]}]], "Input",
- CellChangeTimes->{3.803655730547288*^9},
- CellLabel->"In[1]:=",ExpressionUUID->"eb500d76-2ea0-4be8-8c8a-b3d1dad322e6"],
+ CellChangeTimes->{
+  3.803655730547288*^9, {3.80395368056644*^9, 
+   3.803953702170673*^9}},ExpressionUUID->"eb500d76-2ea0-4be8-8c8a-\
+b3d1dad322e6"],
 
 Cell[TextData[{
  StyleBox["Section 2. Directed InboxGraph visualization.\n",
@@ -1394,7 +1396,7 @@ Cell[BoxData[
         RowBox[{
         "Partition", " ", "community", " ", "by", " ", "subgraph", " ", 
          "co"}], "-", 
-        RowBox[{"occurance", " ", "edge", " ", "weight", " ", 
+        RowBox[{"occurrence", " ", "edge", " ", "weight", " ", 
          RowBox[{"minimization", "."}]}]}], "*)"}], "\[IndentingNewLine]", 
       RowBox[{"communitySubgroups", "=", 
        RowBox[{"GetGraphPartitionGroups", "[", "\[IndentingNewLine]", 
@@ -1669,8 +1671,9 @@ Cell[BoxData[
    3.803658826963674*^9, 3.803658827716708*^9}, {3.803658872381872*^9, 
    3.803658906996066*^9}, {3.803658966518149*^9, 3.8036589667812977`*^9}, {
    3.8036590157419853`*^9, 3.803659028787273*^9}, {3.803659117265563*^9, 
-   3.803659123465919*^9}},
- CellLabel->"In[73]:=",ExpressionUUID->"7c78c561-0e0b-49af-90a9-b5e00f11d508"],
+   3.803659123465919*^9}, 
+   3.803953715842889*^9},ExpressionUUID->"7c78c561-0e0b-49af-90a9-\
+b5e00f11d508"],
 
 Cell[BoxData[
  GraphicsBox[
@@ -56664,17 +56667,17 @@ Notebook[{
 Cell[561, 20, 26322, 451, 270, "Text",ExpressionUUID->"ddfb2eda-3702-4b93-8c3c-343e9827c438"],
 Cell[26886, 473, 1480, 27, 170, "Text",ExpressionUUID->"351b635b-2f75-4337-9d36-421e7f7139d8"],
 Cell[28369, 502, 442, 10, 59, "Text",ExpressionUUID->"60689d58-32bc-4bad-9674-20b7c91ee39a"],
-Cell[28814, 514, 6844, 167, 787, "Input",ExpressionUUID->"eb500d76-2ea0-4be8-8c8a-b3d1dad322e6"],
-Cell[35661, 683, 22948, 391, 381, "Text",ExpressionUUID->"58cace31-5811-4deb-be48-949f873a801c"],
+Cell[28814, 514, 6878, 169, 787, "Input",ExpressionUUID->"eb500d76-2ea0-4be8-8c8a-b3d1dad322e6"],
+Cell[35695, 685, 22948, 391, 381, "Text",ExpressionUUID->"58cace31-5811-4deb-be48-949f873a801c"],
 Cell[CellGroupData[{
-Cell[58634, 1078, 28783, 594, 2719, "Input",ExpressionUUID->"7c78c561-0e0b-49af-90a9-b5e00f11d508"],
-Cell[87420, 1674, 1925224, 31872, 716, "Output",ExpressionUUID->"36b71301-1ffd-45f3-a84c-21b5ad4623e7"]
+Cell[58668, 1080, 28788, 595, 2719, "Input",ExpressionUUID->"7c78c561-0e0b-49af-90a9-b5e00f11d508"],
+Cell[87459, 1677, 1925224, 31872, 716, "Output",ExpressionUUID->"36b71301-1ffd-45f3-a84c-21b5ad4623e7"]
 }, Open  ]],
-Cell[2012659, 33549, 1374627, 22547, 382, "Text",ExpressionUUID->"0f6c5dc8-bd32-48eb-a8ec-4d71a39bb4af"],
-Cell[3387289, 56098, 384, 8, 58, "Text",ExpressionUUID->"6d3ebb39-dc32-45f8-a159-437ac0c551b8"],
+Cell[2012698, 33552, 1374627, 22547, 382, "Text",ExpressionUUID->"0f6c5dc8-bd32-48eb-a8ec-4d71a39bb4af"],
+Cell[3387328, 56101, 384, 8, 58, "Text",ExpressionUUID->"6d3ebb39-dc32-45f8-a159-437ac0c551b8"],
 Cell[CellGroupData[{
-Cell[3387698, 56110, 8234, 206, 640, "Input",ExpressionUUID->"d12baa7b-84a7-48cb-a695-b80d007c753d"],
-Cell[3395935, 56318, 15720, 325, 353, "Output",ExpressionUUID->"d01cb417-3b4b-4828-adcc-89b75d6f859a"]
+Cell[3387737, 56113, 8234, 206, 640, "Input",ExpressionUUID->"d12baa7b-84a7-48cb-a695-b80d007c753d"],
+Cell[3395974, 56321, 15720, 325, 353, "Output",ExpressionUUID->"d01cb417-3b4b-4828-adcc-89b75d6f859a"]
 }, Open  ]]
 }
 ]
